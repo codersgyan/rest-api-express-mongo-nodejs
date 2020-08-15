@@ -1,0 +1,35 @@
+[+] What we are building today
+    - API web service for a blog page
+[+] What will be covering today 
+    - How to create simple apis 
+    - How to create auth system
+    - How to use JWT tokens and protect our routes
+    - protect tokens with refresh token mechanism 
+
+[+] What is an api and why do we need it. 
+    - REST API: A style to write web services data transfer. Representational state transfer
+    - client powered application has no sessions like SPA / Mobile apps
+
+[+] Create express server 
+    - depenadancies Mongoose, express Dev dep: Nodemon
+    - Create Routes in seperate files
+    - Mongo db connection
+
+[+] Build Article Crud without auth
+        - Create a post
+            - dep: @hapi/joi
+        - Fetch all post
+        - Update a post
+        - Delete a post
+
+[+] Add Auth Middleware to fetch all posts 
+    [+] Create Register
+        - deps: bcrypt
+    [+] Create Login
+    [+] Issue access token
+        : deps -> jsonwebtoken, dotenv
+         > create a simple access token without expiry > problem: Life time access if stolen
+        > Add expiry time > Problem: Bad UX
+        > Introduce refresh token : Problem: This token also can be stolen, No way to revoke / delete that token
+          One can generate unlimited access tokens using this refresh token
+        > Make logout functionality and delete refresh token from database. Problem solved :)
