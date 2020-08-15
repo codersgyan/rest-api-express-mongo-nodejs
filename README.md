@@ -1,4 +1,4 @@
-# rest-api-express-mongo-nodejs
+# Rest-Api-Express-Mongo-Nodejs
 
 Rest api using Node, Express, Mongo and socket.io
 We will build rest api for a simple blog project. 
